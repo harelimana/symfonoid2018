@@ -1,0 +1,211 @@
+
+/* 
+    Created on : May 30, 2015, 8:35:05 PM
+    Author     : axxa
+*/
+/*===============================
+/* positionning  
+/*===============================*/
+
+body{
+    width: 100%;
+    margin: auto;
+}
+
+#ebanner{
+    padding: 0.01% 0;
+    background-color: #f7f7f7;
+    text-transform: capitalize; 
+} 
+#ebanner p{
+    padding: 1% 0;    padding: 0.95% 0;        /* 10px */
+    font-family: 'Tahoma', sans-serif;
+    font-size: 0.875em;
+}
+
+h3, h4, .contenu p{
+    font-family: 'Open sans',sans-serif;
+    font-size: 0.75em;
+    margin: 1% 0;
+}
+
+.contenant img, .contenu{ /* the image and the text are floating beside each other */
+    float: left;
+}
+.contenant:nth-child(1){
+    margin-top: 3.5%;
+}
+.contenant:nth-child(2){
+    margin-top: 3.5%;
+}
+/*
+.nfl{
+    float: none;
+}*/
+.contenant{
+    width: 87.247%;             /* 470px / 960 */
+   /* height: 2.083%;   */     /* 98px taille de l'image px */
+    margin: 1.142% auto;       /* 10 / 480 */
+    padding: 3.083% auto; /*20 px /480 */
+    background-color: #d8d8d8;
+    font-size: 0.85em !important;  
+  /* overflow: hidden;  */
+} 
+.contenu{
+    max-width: 54.1%;
+    line-height: 2;
+    /*    margin-left: 3%; */
+}
+
+.dia, #bubble-content{
+    width: 100%;
+    margin:  auto;
+}
+/*===============================
+/* resizing images of the team         
+/*===============================*/
+
+.contenant img:nth-child(n){
+    width: 35%;         /* 148px/480 */
+    /*   float: left; */
+    background-repeat: no-repeat;
+    /*   margin: 3%; */
+}
+
+/*===============================
+/*   de Vinci bubble             
+/*===============================*/
+#bubble-content{
+    position: relative;
+}
+#bubble-content p{
+    width: 97%;
+    padding: 2% 1%;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75em;
+
+} 
+#bubble-content #davinci{
+    position: absolute;
+    top: 87.3%;
+    left: 5.3%;
+    width: 30%;
+}
+.bubble{
+    position: relative;
+
+}
+/*=================================
+/* the davinchi testimonials bubble
+/*=================================*/
+.bubble:before{
+    content: url('../img/img_team/testimonials_bg.png');
+    position: absolute;
+    width: 1.042%;  /*5px*/
+    height: 1.042%; /*5px*/
+    left: 2.044%;   /*10px*/
+    top: 99.569%;   /*55px*/
+}
+
+/*===============================
+/* borders around the pargraphs 
+/*===============================*/
+.border-reverse{ /* to hide the border where it's not required */
+    border: 0.5px solid #fff;
+    float: left;
+} 
+.bdr{
+    border: 0.5px solid #bbb; 
+    border-radius: 2px;
+    -moz-border-radius: 5px;
+}
+
+.coloRred{
+    color: #ff0040;
+} 
+/*===============================
+/* resizing images of the team         
+/*===============================*/
+
+/*===============================
+/*   shadow effects             
+/*===============================*/
+
+.effect{
+    position: relative;
+   
+}
+.effect:before, .effect:after{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px; /*1.563%;*/
+    left: 10px; /*1.042%; /*10px; */
+    width: 49%;
+    top: 80%;
+    background: #000;
+    -webkit-box-shadow: 0 1.563% 1.042% #000;
+    -moz-box-shadow: 0 1.563% 1.042% #000;
+    box-shadow: 0 15px 10px #000;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg); 
+}
+.effect:after{
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 1.042%;
+    left: auto;
+}
+
+
+
+/*===============================
+/*      media queries           
+/*===============================*/
+@media screen and (min-width: 480px){
+    .centrage{
+        width: 767px;
+        
+    } 
+
+    /*========   team wrapping and sizing ========= */
+    
+    .contenant{
+        width: 44.1% !important;       /*  43.10%; /* 470px / 960 */
+      /*  height: 5.854%;    /*  68px; */
+        padding: 2.083% 2.083% !important; /*20 px /480 */
+        float: left !important;
+        font-size: 0.85em;
+    } 
+    .contenu{
+        margin-left: 2%;
+    }
+
+    .dia article:nth-child(odd){
+        margin-right: 2.50%;
+    }
+
+}
+
+@media screen and (min-width: 767px){
+    .centrage{
+        width: 959px;
+    }
+    
+}
+@media screen and (min-width: 960px){
+    .centrage{
+        width: 1050px;
+    }
+
+    .contenu{
+        width: 44.1%;
+    } 
+
+}

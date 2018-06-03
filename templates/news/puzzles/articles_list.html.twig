@@ -1,0 +1,8 @@
+
+<div class="row">
+    {% for article in articles %}
+        {{include('news/puzzles/article_list.html.twig',
+            {'article': article, 'id': loop.index})
+        }}
+    {% endfor %}
+</div>

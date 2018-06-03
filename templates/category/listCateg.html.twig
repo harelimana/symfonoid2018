@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div><a class="btn btn-primary pull-left" href="/ajout_categorie">Ajout d'une catégorie</a></p></div>
+    <div class="help-block" style="height:50px;"></div>
+    {% for c in Categories %}
+        <div class="jumbotron">
+            <p>{{c.name}}</p>
+            <p>{{c.slug}}</p>
+            <a href="/supprimer_categorie/{{c.id}}" class="btn btn-danger pull-right">Supprimer</a></td>
+            <p>Linked News:</p>
+            {% for news in c.news %}
+                <ul>
+                    <li>{{ news.name }}</li>
+                </ul>
+            {% endfor %}
+
+        </div>
+    {% endfor%}
+{% endblock %}

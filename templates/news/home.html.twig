@@ -1,0 +1,9 @@
+{% extends 'news/layout.html.twig' %}
+{% block container %}
+  <div class="container">
+      {{  include('news/puzzles/articles_list.html.twig', {'articles_list': articles})  }}
+  </div>
+{% endblock %}
+{% block footer %}
+      {{ include('common/footer.html.twig') }}
+{% endblock %}
