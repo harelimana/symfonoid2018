@@ -85,4 +85,11 @@ class Categories
         $this->news = $news;
     }
 
+    /**
+     * @return mixed
+     */
+    public function  __toString(){
+        return $this->name;
+    }
+
 }
